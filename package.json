@@ -1,0 +1,22 @@
+{
+  "name": "angular1practice",
+  "version": "1.0.0",
+  "description": "Angular Practice Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riaconsultant/angular1practice.git"
+  },
+  "author": "Manoj Chaurasiya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/riaconsultant/angular1practice/issues"
+  },
+  "homepage": "https://github.com/riaconsultant/angular1practice#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
