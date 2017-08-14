@@ -3,10 +3,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
     </script>
 </head>
-<body>
-    <div ng-app="" ng-init="name='manoj'">
+<body ng-app="myApp">
+    <!-- Examples of Directives
+        ng-app,ng-init,ng-model is a directives
+    -->
+    <div  ng-init="name='manoj'">
         <p>Name: <input type="text" ng-model="name"/p>
         <p ng-bind="name"></p>
+        <span>{{name}}</span>
+    </div>
+    <!-- ng-repeat example -->
+    <div ng-init="names=[{name:'Manoj',age:'32'},{name:'Sonu',age:'28'},{name:'Meera',age:'30'},{name:'Mann',age:'6'},{name:'Jaanu',age:'3'}]">
+
+        <ul>
+            <li ng-repeat="x in names">
+                {{x.name + " --" +x.age}}
+            </li>
+        </ul>
+    </div>
+    <!-- Create new directive -->
+    <script src="sample_directive.js"></script>
+    <mydirect></mydirect>
+    <div ng-controller="myCtrl">
+        {{name}}
     </div>
 </body>
 </html>
