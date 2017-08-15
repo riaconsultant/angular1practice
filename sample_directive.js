@@ -17,4 +17,9 @@ app.directive('mydirect',function(){
 /** Controller $scope parameter is always available in the view and controller file */
 app.controller('myCtrl',function($scope){
     $scope.name="Hello World !!";
+    $scope.data=[{a:"1"},{a:"2"},{a:"3"},{a:"4"},{a:"5"},{a:"6"}];
+});
+/** $rootScope */
+app.run(function($rootScope){
+    $rootScope.name="My Name is Manoj Kumar Chaurasiya";
 });

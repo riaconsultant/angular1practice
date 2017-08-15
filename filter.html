@@ -1,0 +1,28 @@
+<html></html>
+<head>
+    <title>Filter Example</title>
+    <script src="lib/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myCtrl">
+        <!-- currency : format number to currency
+            date: format a date to specified format
+            filter: select a subset of items from an array
+            json: format an object to json string
+            limitTo: Limits an array/string, into a specified number of elements/characters
+            lowercase: Format a string to lower case
+            number: Format a string to a string
+            orderBy: Orders an array by an expression
+            uppercase: Format a string to uppercase -->
+        <span>{{ name | uppercase }}</span> |
+        <span>{{ name | lowercase}}</span>|
+        <span>Real Value : {{ name}} </span>
+    </div>
+    <div ng-controller="nameCtrl">
+        <ul>
+            <li ng-repeat="x in names | orderBy:'age':false"><span>{{ x.name }}+ {{ x.age }} </span></li>
+        </ul>
+    </div>
+    <script src="filter.js"></script>
+</body>
+</html>

@@ -7,7 +7,8 @@
     <!-- Examples of Directives
         ng-app,ng-init,ng-model is a directives
     -->
-    <div  ng-init="name='manoj'">
+    <!-- <div  ng-init="name='manoj'"> -->
+    <div>
         <p>Name: <input type="text" ng-model="name"/p>
         <p ng-bind="name"></p>
         <span>{{name}}</span>
@@ -25,7 +26,10 @@
     <script src="sample_directive.js"></script>
     <mydirect></mydirect>
     <div ng-controller="myCtrl">
-        {{name}}
+        <span> {{name}}</span>
+        <ul>
+            <li ng-repeat="y in data">{{y.a}} <input ng-model="name" /></li>
+        </ul>
     </div>
 </body>
 </html>
