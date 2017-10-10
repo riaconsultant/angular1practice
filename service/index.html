@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title></title>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+    <style>
+    table,tr,td{
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+    table tr:nth-child(odd){
+        background-color: #ccddff;
+    }
+    table tr:nth-child(even){
+        background-color: #fff;
+    }
+    </style>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myCtrl">
+        <h4>{{myUrl}}</h4>
+        <div>{{mypage}}</div>
+        <hr/>
+        <div>{{myheader}}</div>
+        <div>{{myInterval}}</div>
+
+        <ul>
+            <li ng-repeat="x in counts">{{x|myFormat}}</li>
+        </ul>
+    </div>
+<h4>$http Service Example</h4>
+<div ng-controller="formCtrl">
+    <input type="text" ng-model="model.name"/>
+    <input type="text" ng-model="model.age"/>
+    <select ng-options="model.name for model in model1" ng-model="model2.select"/>
+    <input type="submit" ng-click="showModel(model)"/>
+    <h4>{{model}}</h4>
+    <h4>{{model1}}</h4>
+    <h4>{{model2}}</h4>
+    <hr>
+    <h4> Show JSON data </h4>
+    <div>{{jsonData}}</div>
+    <table>
+        <tr ng-repeat="x in jsonData">
+            <td>{{$index+1}}</td>
+            <td>{{x.Name}}</td>
+            <td>{{x.Country}}</td>
+        </tr>
+    </table>
+    <select ng-model="countryName" ng-options="x.Country for x in jsonData"></select>
+    <p>Selected Options: {{ countryName.Name + " "+ countryName.index}}</p>
+</div>
+
+    <script type="text/javascript">
+        
+    </script>
+</body>
+</html>
